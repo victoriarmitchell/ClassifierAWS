@@ -6,11 +6,12 @@ from stacks.serving_stack import ServingStack
 
 app = core.App()
 
-shared_context = app.node.try_get_context('shared_context')
+shared_context = app.node.try_get_context('arn:aws:codestar-connections:us-east-1:255219863677:connection/61d68dc7-2b2b-4495-963e-ccdbec7dad13')
+#shared_context = app.node.try_get_context('shared_context')
 
 cdk_environment = core.Environment(
-    region=shared_context['aws_region'],
-    account=shared_context['aws_account'])
+    region=shared_context['us-east-1'],
+    account=shared_context['255219863677'])
 
 cicd = CiCdStack(scope=app,
                  id='classifier-cicd-stack',

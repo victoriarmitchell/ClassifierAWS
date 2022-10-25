@@ -1,0 +1,15 @@
+name: classifieraws
+dependencies:
+    - pyyaml
+    - pip
+    - pip:
+        - fastapi
+        - sklearn
+        - python-multipart
+        - boto3
+        - numpy
+        - uvicorn
+    - aiofiles
+    - jinja2
+    - joblib
+    - pytest

@@ -23,9 +23,9 @@ if __name__ == '__main__':
     # save and load model
     text_classifier = TextClassifier(classes=X_test['target_names'],
                                      pipeline=classifier_pipe)
-    text_classifier.save('/tmp/classifier.pkl')
-    text_classifier = TextClassifier.load('/tmp/classifier.pkl')
-    sample_pred = text_classifier('May god bless you.')
+    text_classifier.save("classifier.pkl")
+    text_classifier = TextClassifier.load("classifier.pkl")
+    sample_pred = text_classifier('Basketball is my favorite sport.')
     print(f'sample pred: {sample_pred}')
 
 
